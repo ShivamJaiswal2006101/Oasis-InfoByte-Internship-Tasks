@@ -12,6 +12,6 @@ LEVEL - 2 Tasks :
  - Vanilla JavaScript
 
 ### Links
- - [Calculator](https://paras-punjabi.github.io/oibsip_2/Calculator/)
- - [Tribute Page](https://paras-punjabi.github.io/oibsip_2/Tribute%20Page/)
- - [Basic Todo WebApp](https://paras-punjabi.github.io/oibsip_2/Todo%20Web%20App/)
+ - [Calculator](https://shivamjaiswal2006101.github.io/Oibsip/Calculator/)
+ - [Tribute Page](https://shivamjaiswal2006101.github.io/Oibsip/Tribute%20Page/)
+ - [Basic Todo WebApp](https://shivamjaiswal2006101.github.io/Oibsip/Todo%20Web%20App/)
