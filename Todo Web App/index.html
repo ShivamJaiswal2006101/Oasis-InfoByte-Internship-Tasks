@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+    <link rel="shortcut icon" href="favicon.png     " type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100 flex">
+    <!-- ************************************************************** -->
+    <!--** sidebar -->
+    <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+        <div class="p-6">
+            <div class="text-white title text-4xl font-semibold uppercase">Todo App</div>
+        </div>
+        <nav class="text-white text-base font-semibold pt-3">
+            <div class="flex active-tab items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item" id="new_todo_tab">
+                <i class="fa-solid fa-note-sticky mr-3"></i>
+                New Todo
+            </div>
+            <div class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item" id="completed_tab">
+                <i class="fa-sharp fa-solid fa-circle-check mr-3"></i>
+                Completed 
+            </div>
+            <div class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item" id="pending_tab">
+                <i class="fa-solid fa-hourglass-half mr-3"></i>
+                Pending 
+            </div>
+        </nav>
+    </aside>
+    <!-- ************************************************** -->
+    <!--** new Todo -->
+    <div class="w-3/4 h-screen flex flex-col" id="new_todo">
+        <h1 class="text-5xl mt-6 ml-9 text-bold" style="color:rgb(31,41,55);text-align:start;font-family: 'Baloo Bhai 2', cursive;">New Todo</h1>
+        <div class="w-full flex-grow p-9">
+            <div class="mt-2 mb-5">
+                <label class="block text-2xl text-gray-600" for="title">Title</label>
+                <input class="w-full title px-5 py-1 border-transparent text-gray-700 bg-gray-200 rounded" id="title" type="text">
+            </div>
+            <div class="mt-2 mb-5">
+                <label class=" block text-2xl text-gray-600" for="description">Description</label>
+                <textarea class="w-full px-5 py-2 text-gray-700 description border-transparent bg-gray-200 rounded resize-none	" id="description" rows="6" ></textarea>
+            </div>
+            <div class="mt-6 mb-5">
+                <button class="px-4 py-2 text-2xl text-white font-light tracking-wider bg-gray-900 rounded mr-2" id="submit">Submit</button>
+                <button class="px-4 py-2 text-white text-2xl font-light tracking-wider bg-gray-900 rounded ml-2" id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- ******************************************************* -->
+    <!--** completed todos -->
+
+    <section  id="complete_todo">
+        <div class="container py-6 mx-auto">
+          <h1 class="text-5xl pl-9 mb-3 text-bold" style="color:rgb(31,41,55);text-align:start;font-family: 'Baloo Bhai 2', cursive;">Completed Todo's</h1>
+          <div class="flex flex-wrap" id="complete_todo_div">
+                          
+            </div>
+
+          </div>
+
+        </div>
+    </section>
+
+    <!--** Pending Todo -->
+    <section  id="pending_todo">
+        <div class="container py-6 mx-auto">
+          <h1 class="text-5xl pl-9 mb-3 text-bold" style="color:rgb(31,41,55);text-align:start;font-family: 'Baloo Bhai 2', cursive;">Pending Todo's</h1>
+
+          <div class="flex flex-wrap" id="pending_todo_div">
+                <div></div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+
+    
+<!-- Modal toggle -->
+<button data-modal-target="medium-modal" id="modal_btn" data-modal-toggle="medium-modal" class="bg-blue-600 absolute hidden" type="button" >
+    Default modal
+    </button>
+  
+  <!-- Main modal -->
+  <div id="medium-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-lg max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+                    Edit Todo
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="medium-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="mt-2 mb-5">
+                    <label class="block text-2xl text-gray-600" for="title">Title</label>
+                    <input class="w-full title px-5 py-1 border-transparent text-gray-700 bg-gray-200 rounded" id="edit_title" type="text">
+                </div>
+                <div class="mt-2 mb-5">
+                    <label class=" block text-2xl text-gray-600" for="description">Description</label>
+                    <textarea class="w-full px-5 py-2 text-gray-700 description border-transparent bg-gray-200 rounded resize-none	" id="edit_description" rows="6" ></textarea>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 justify-end">
+                <button data-modal-hide="medium-modal" type="button" class="text-white rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 " style="background-color: rgb(221,52,69);">Cancel</button>
+
+                <button data-modal-hide="medium-modal" type="button" id="edit_save" class="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center " style="background-color: rgb(24,135,85);">Save</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./app.js" type="module" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</html>

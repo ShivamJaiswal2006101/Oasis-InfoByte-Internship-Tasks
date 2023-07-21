@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+
+body {
+  font-family: "Baloo Bhai 2", cursive;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: #f4f4f4;
+  letter-spacing: 1px;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 3px;
+  position: sticky;
+  top: -22%;
+}
+
+.portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  color: #f4f4f4;
+  margin-top: -10px;
+  text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+#content {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#content > img{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#content > h1 {
+    font-size: 40px;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#quote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background-color:azure;
+  font-weight: bolder;
+  padding: 7px;
+  border-radius: 20px;
+  width: 70%;
+  font-size: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 30px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.bg-sidebar {
+  background: rgb(31,41,55);
+}
+
+.active-tab{
+  background-color: rgb(199,201,205) !important;
+  color: rgb(31,41,55) !important;
+}
+
+.nav-item{
+  font-size: 25px;
+  width: 90%;
+  border-radius: 10px;
+  font-family: 'Baloo Bhai 2', cursive;
+  letter-spacing: 2px;
+}
+
+
+nav > div{
+  margin-bottom: 30px;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  background: rgba(101, 106, 110, 0.5);
+}
+
+.title:focus, .title{
+  border: none;
+  border-color: none;
+}
+#pending_todo, #complete_todo{
+    display: none;
+}
+.buttons > button:hover{
+  transform: scale(1.5);
+}
+
+.buttons > button{
+  color:rgb(255, 255, 255);
+}
+
+.buttons > button:first-child:hover{
+  color:rgba(255, 0, 0, 0.676);
+}
+
+.buttons > button:nth-child(2):hover{
+  color:rgb(117, 117, 117);
+}
+.buttons > button:nth-child(3):hover{
+  color:rgb(12, 165, 12);
+}
+
+.todo{
+  background-color: rgba(31, 41, 55, 0.9);
+  scale: 0.9;
+}
+
+.todo-title{
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.date{
+  color:rgba(255, 255, 255, 0.7);
+  font-family:monospace;
+}
+
+#complete_todo,#pending_todo{
+  overflow-y: scroll;
+  width: 83%;
+}

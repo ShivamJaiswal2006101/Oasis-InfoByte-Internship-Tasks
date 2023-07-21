@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="icon.png" type="image/x-icon">
+<body class="bg-zinc-600 flex justify-center items-center flex-col" style="height: 100vh; width:100vw;">
+    <h1 class="font-mono flex text-6xl text-white mb-5">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 21">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        <span>Calculator</span>
+    </h1>
+    <div class="bg-sky-300 w-2/5 flex flex-col justify-evenly items-center rounded-2xl  " style="height: 85vh;">
+
+        <div id="screen" title="Double Click on screen to copy result to clipboard" class="screen grid grid-row-5 h-1/6 bg-white rounded-lg" style="width: 90%;"></div>
+
+        <div class="buttons grid grid-rows-5 grid-cols-5 h-4/6 rounded-lg"style="width: 90%;">
+            <button class="btn highlight">&#40;</button>
+            <button class="btn highlight">&#41;</button>
+            <button class="btn highlight">Del</button>
+            <button class="btn col-span-2 highlight">Clear</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn highlight">%</button>
+            <button class="btn highlight">&PlusMinus;</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn highlight">&times;</button>
+            <button class="btn highlight">&divide;</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn highlight">&plus;</button>
+            <button class="btn highlight">&minus;</button>
+            <button class="btn highlight">.</button>
+            <button class="btn">0</button>
+            <button class="btn highlight">&pi;</button>
+            <button class="btn col-span-2 highlight">Enter</button>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</html>

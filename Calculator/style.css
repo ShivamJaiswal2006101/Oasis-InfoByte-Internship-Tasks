@@ -1,0 +1,30 @@
+.btn{
+    background-color: white;
+    margin: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    font-family: monospace;
+}
+
+.highlight{
+    background-color: rgb(73, 103, 136);
+    color: white;
+}
+
+.btn:active{
+    background-color: rgb(173, 208, 243);
+}
+
+#screen{
+    font-size: 45px;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 7px;
+    overflow-x: auto;
+}
